@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Google Maps Filters</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<a href="" target="_blank" class="repo">
+    <i class="fa fa-github"></i><span>Home</span>
+</a>
+
+<!-- mapa iframe -->
+<div id="map"></div>
+<!-- fim mapa iframe -->
+
+<!-- filters -->
+<div class="container">
+    <form action="" id="buscar-locais" class="filter-wrapper">
+        <div class="row filter-select">
+            <div class="col-xs-2">
+                <select class="form-control filter filter-country" id="pais">
+                    <option value="all">Pais</option>
+                    <option value="brasil">Brasil</option>
+                    <option value="eua">EUA</option>
+                    <option value="inglaterra">Inglaterra</option>
+                </select>
+            </div>
+
+            <div class="col-xs-2">
+                <select class="form-control filter filter-state" id="estado">
+                    <option value="all">Estado</option>
+                    <option value="parana">Paraná</option>
+                    <option value="california">Califórnia</option>
+                    <option value="reino">Reino Unido</option>
+                    <option value="rs">Rio Grande do Sul</option>
+                    <option value="acre">Acre</option>
+                    <option value="amazonia">Amazônia</option>
+                    <option value="mt">Mato Grosso</option>
+                    <option value="ms">Mato Grosso do Sul</option>
+                </select>
+            </div>
+
+            <div class="col-xs-2">
+                <select class="form-control filter filter-city" id="cidade">
+                    <option value="all">Cidade</option>
+                    <option value="curitiba">Curitiba</option>
+                    <option value="francisco">São Francisco</option>
+                    <option value="londres">Londres</option>
+                    <option value="panambi">Panambi</option>
+                    <option value="portoAlegre">Porto Alegre</option>
+                    <option value="ijui">Ijui</option>
+                    <option value="cruzAlta">Cruz Alta</option>
+                    <option value="ibiruba">Ibirubá</option>
+                    <option value="bozano">Bozano</option>
+                    <option value="manaus">Manaus</option>
+                    <option value="manoelUrbano">Manoel Urbano</option>
+                    <option value="cuiaba">Cuiaba</option>
+                    <option value="campoGrande">Campo Grande</option>
+                </select>
+            </div>
+
+            <div class="col-xs-2">
+                <select class="form-control filter filter-region" id="regiao">
+                    <option value="all">Região</option>
+                    <option value="centro">Centro</option>
+                    <option value="leste">Leste</option>
+                    <option value="nordeste">Nordeste</option>
+                    <option value="noroeste">Noroeste</option>
+                    <option value="norte">Norte</option>
+                    <option value="oeste">Oeste</option>
+                    <option value="sudeste">Sudeste</option>
+                    <option value="sul">Sul</option>
+                    <option value="sudoeste">Sudoeste</option>
+                </select>
+            </div>
+
+            <div class="col-xs-2">
+                <select class="form-control filter filter-company" id="empresa">
+                    <option value="all">Empresa</option>
+                    <option value="termogrex">Termogrex</option>
+                    <option value="agromec">Agromec</option>
+                    <option value="sdryer">SDryer</option>
+                    <option value="dryertech">DryerTech</option>
+                </select>
+            </div>
+
+            <div class="col-xs-2">
+                <select class="form-control filter filter-unity" id="unidade">
+                    <option value="all">Unidade</option>
+                    <option value="termogrex">Termogrex</option>
+                    <option value="agromec">Agromec</option>
+                    <option value="sdryer">SDryer</option>
+                    <option value="dryertech">DryerTech</option>
+                </select>
+            </div>
+
+            <div class="col-xs-2">
+                <select class="form-control filter filter-equipment" id="equipamento">
+                    <option value="all">Equipamento</option>
+                    <option value="maquina">Máquina de limpeza</option>
+                    <option value="silo">Silo</option>
+                    <option value="secador">Secador</option>
+                    <option value="transportador">Transportador</option>
+                </select>
+            </div>
+
+            <div class="col-xs-2">
+                <select class="form-control filter filter-status" id="status">
+                    <option value="all">Status</option>
+                    <option value="loja">Offline</option>
+                    <option value="online">Online</option>
+                    <option value="conectado">Conectado</option>
+                    <option value="desconectado">Desconetado</option>
+                </select>
+            </div>
+
+            <div class="col-xs-2">
+                <button type="submit" class=" btn btn-default btn-success" style="width: 100%; background-color: #31346e; margin-top: 5px;">
+                    Pesquisar
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- end filters -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<!-- partial 
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script src='https://maps.google.com/maps/api/js?sensor=false'></script>
+<script src='https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js'></script>-->
+    
+  <script src="https://maps.googleapis.com/maps/api/js"></script>   
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/js-marker-clusterer/1.0.0/markerclusterer.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>

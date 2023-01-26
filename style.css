@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.repo {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+  background: #8BC34A;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.repo i {
+  font-size: 20px;
+  vertical-align: middle;
+}
+.repo span {
+  display: none;
+  margin-left: 5px;
+}
+@media (min-width: 768px) {
+  .repo span {
+    display: inline-block;
+  }
+}
+.repo:hover, .repo:active, .repo:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #7CB342;
+}
+
+/* Container
+   ========================================================================== */
+.container {
+  position: relative;
+  right: 0;
+  left: 0;
+  z-index: 10000;
+  height: 15vh;
+  width: 100vw;
+  padding: 15px;
+  background: #080934;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container #buscar-locais {
+  display: block;
+  width: 100%;
+}
+.container select {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: black;
+  border: 2px solid #fff;
+  box-shadow: none !important;
+  outline: none !important;
+  margin-top: 5px;
+}
+
+/* Mapa
+   ========================================================================== */
+#mapgoogle {
+  position: relative;
+  height: 85vh;
+  width: 100%;
+  background: #f3f3f3;
+}
+#map {
+  position: relative;
+  height: 85vh;
+  width: 100%;
+  background: #f3f3f3;
+}
+/* Original do projeto
+   ========================================================================== 
+.wrapper {
+  align-item: center;
+  display: flex;
+}
+.wrapper .filter-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+}
+
+h3 small {
+  display: block;
+  font-size: 12px;
+}
+
+button {
+  margin-top: 40px;
+}
+
+#map {
+  height: 100vh;
+  width: 700px;
+}
+
+.alert {
+  color: red;
+  display: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+.alert.is-visible {
+  display: block;
+}
+
+.tt-menu {
+  border: 1px solid transparent;
+  border-color: transparent lightgrey lightgrey lightgrey;
+  background: white;
+  width: 100%;
+}
+.tt-menu .tt-dataset .tt-suggestion {
+  color: darkgrey;
+  cursor: pointer;
+  padding: 1rem;
+  user-select: none;
+}
+.tt-menu .tt-dataset .tt-suggestion.tt-cursor, .tt-menu .tt-dataset .tt-suggestion:hover {
+  background: lightgrey;
+  color: white;
+}
+.tt-menu .tt-dataset .tt-suggestion + .tt-suggestion {
+  border-top: 1px solid lightgrey;
+}*/
