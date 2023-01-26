@@ -76,6 +76,17 @@
   width: 100%;
   background: #f3f3f3;
 }
+
+
+.alert {
+  color: red;
+  display: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+.alert.is-visible {
+  display: block;
+}
 /* Original do projeto
    ========================================================================== 
 .wrapper {
@@ -100,16 +111,6 @@ button {
 #map {
   height: 100vh;
   width: 700px;
-}
-
-.alert {
-  color: red;
-  display: none;
-  font-size: 16px;
-  font-weight: bold;
-}
-.alert.is-visible {
-  display: block;
 }
 
 .tt-menu {

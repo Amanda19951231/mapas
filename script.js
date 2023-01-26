@@ -531,10 +531,10 @@ jQuery.each(strs, function(i, str) {
 cb(matches);
 };    
 };
-searchInput.typeahead({
-hint: true,
-highlight: true,
-minLength: 1
+  searchInput.typeahead({
+  hint: true,
+  highlight: true,
+  minLength: 1
 },
 {
 name: 'customFilter',
